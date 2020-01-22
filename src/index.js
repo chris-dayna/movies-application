@@ -18,9 +18,9 @@ getMovies().then((movies) => {
       // $.ajax("db.json")
       //     .done(function(data){
       //         console.log(data);
-                  $('#insertProducts').append('<tr>' +
-                      '<th scope="row">' + movies.title + '</th>' +
-                      '<td>' + movies.rating + '</td>' +
+                  $('#insertProducts').html('<tr>' +
+                      '<td scope="row">' + title + '</td>' +
+                      '<td>' + rating + '</td>' +
                       // '<td>' + '$' + data.price + '</td>' +
                       // '<td>' + data[i].categories + '</td>' +
                       '</tr>)');
