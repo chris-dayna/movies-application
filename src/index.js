@@ -18,13 +18,15 @@ getMovies().then((movies) => {
       // $.ajax("db.json")
       //     .done(function(data){
       //         console.log(data);
+      for (var i = 0; i < movies.length; i++){
                   $('#insertProducts').html('<tr>' +
                       '<td scope="row">' + title + '</td>' +
                       '<td>' + rating + '</td>' +
+
                       // '<td>' + '$' + data.price + '</td>' +
                       // '<td>' + data[i].categories + '</td>' +
                       '</tr>)');
-          //     }
+              }
           //
           //
           // });
