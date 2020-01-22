@@ -14,11 +14,10 @@ const {getMovies} = require('./api.js');
 getMovies().then((movies) => {
   console.log('Here are all the movies:');
   movies.forEach(({title, rating, id}) => {
-    // console.log(`id#${id} - ${title} - rating: ${rating}`);
-    //   $.ajax("./db.json")
-    //       .done(function(data){
-    //           console.log(data);
-    //           for (var i = 0; i < data.length; i++){
+    console.log(`id#${id} - ${title} - rating: ${rating}`);
+      // $.ajax("db.json")
+      //     .done(function(data){
+      //         console.log(data);
                   $('#insertProducts').append('<tr>' +
                       '<th scope="row">' + movies.title + '</th>' +
                       '<td>' + movies.rating + '</td>' +
@@ -35,7 +34,3 @@ getMovies().then((movies) => {
   alert('Oh no! Something went wrong.\nCheck the console for details.');
   console.log(error);
 });
-
-//table
-
-
