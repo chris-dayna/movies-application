@@ -15,7 +15,7 @@
 
     <div class="container">
         <div class="row"></div>
-        <img src="img/filmreel.png" id="loading">
+<!--        <img src="img/filmreel.png" id="loading">-->
         <h1 class="text-center">Movie Application</h1>
 
         <table id="products" class="table table-striped table-bordered">
@@ -41,8 +41,23 @@
 
             </tbody>
         </table>
-<!--        <button id="btnRefresh">Click Here to Refresh!</button>-->
-<!--        <div id="randomDiv"></div>-->
+
+
+<!-- ADD A MOVIE-->
+        <label for="movieNameInput">What movie would you like to add?</label>
+        <input type="text" id="movieNameInput" placeholder="enter movie name">
+        <br>
+        <label for="selectRatingInput">How would you rate this movie?</label>
+        <select id="selectRatingInput">
+            <option value="1">*</option>
+            <option value="2">**</option>
+            <option value="3">***</option>
+            <option value="4">****</option>
+            <option value="5" selected="selected">*****</option>
+        </select>
+        <br>
+        <button id="newMovieButton">Action</button>
+
     </div>
 
 <!--    BOOTSTRAP-->
@@ -51,8 +66,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
     <!--LOADING STUFF-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+<!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>-->
+<!--    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>-->
 
 
     <script src="./main.js"></script>

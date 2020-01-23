@@ -29,12 +29,25 @@ getMovies().then((movies) => {
                       <td> ${genre}</td>
                       </tr>`);
   });
+
+
 }).catch((error) => {
   alert('Oh no! Something went wrong.\nCheck the console for details.');
   console.log(error);
 });
 
-$('#insertProducts').on("load", function() {
-  $("#loading").hide();
+// $('#insertProducts').on("load", function() {
+//   $("#loading").hide();
+// });
+
+$('#newMovieButton').click(function(event){
+    let newMovie = $('#movieNameInput').val();
+    let newRating = $('#selectRatingInput').val();
+   $('#insertProducts').append(`<td> id </td>
+                                <td> ${newMovie} </td>
+                                <td> ${newRating} </td>
+                                <td> year </td>
+                                <td> genre </td>`);
+
 });
 
