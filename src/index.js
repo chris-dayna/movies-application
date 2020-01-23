@@ -1,6 +1,3 @@
-
-
-
 const $ = require('jquery');
 
 /**
@@ -36,18 +33,23 @@ getMovies().then((movies) => {
   console.log(error);
 });
 
-// $('#insertProducts').on("load", function() {
-//   $("#loading").hide();
-// });
 
-$('#newMovieButton').click(function(event){
-    let newMovie = $('#movieNameInput').val();
-    let newRating = $('#selectRatingInput').val();
-   $('#insertProducts').append(`<td> id </td>
-                                <td> ${newMovie} </td>
-                                <td> ${newRating} </td>
-                                <td> year </td>
-                                <td> genre </td>`);
+$('#newMovieButton').click(function(event) {
+  const movieName = $('#movieNameInput').val();
+  const movieRating =$('#selectRatingInput').val();
+  // var formData = JSON.stringify(movieName + movieRating).serializeArray();
 
-});
+  $.ajax("/api/movies", {
+    type: "POST",
+    data: {
+      title: movieName,
+      rating: movieRating
+    }
+  })});
+
+
+
+
+
+
 
