@@ -1,3 +1,6 @@
+
+
+
 const $ = require('jquery');
 
 /**
@@ -9,15 +12,21 @@ sayHello('World');
 /**
  * require style imports
  */
+
+
+
 const {getMovies} = require('./api.js');
 
 getMovies().then((movies) => {
   console.log('Here are all the movies:');
-  movies.forEach(({title, rating, id}) => {
+  movies.forEach(({title, rating, year, genre, id}) => {
     console.log(`id#${id} - ${title} - rating: ${rating}`);
                   $('#insertProducts').append(`<tr>
-                      <td scope="row"> ${title} </td>
+                      <td scope="row"> ${id} </td>
+                      <td>${title}</td>
                       <td> ${rating} </td>
+                      <td> ${year}</td>
+                      <td> ${genre}</td>
                       </tr>`);
   });
 }).catch((error) => {
@@ -25,6 +34,7 @@ getMovies().then((movies) => {
   console.log(error);
 });
 
-$(window).load(function(){
-    $('.loadingDiv').fadeOut('slow');
-})
+$('#insertProducts').on("load", function() {
+  $("#loading").hide();
+});
+
