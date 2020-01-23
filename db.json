@@ -13,6 +13,26 @@
       "year": "1977",
       "genre": "Sci-fi / Action / Fantasy",
       "id": 2
+    },
+    {
+      "title": "new movie",
+      "rating": "5",
+      "id": 3
+    },
+    {
+      "title": "newer movie",
+      "rating": "3",
+      "id": 4
+    },
+    {
+      "title": "newest movie",
+      "rating": "2",
+      "id": 5
+    },
+    {
+      "title": "",
+      "rating": "5",
+      "id": 6
     }
   ]
 }
