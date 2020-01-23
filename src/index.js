@@ -24,3 +24,7 @@ getMovies().then((movies) => {
   alert('Oh no! Something went wrong.\nCheck the console for details.');
   console.log(error);
 });
+
+$(window).load(function(){
+    $('.loadingDiv').fadeOut('slow');
+})
