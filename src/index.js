@@ -22,9 +22,8 @@ getMovies().then((movies) => {
                       <td scope="row"> ${id} </td>
                       <td>${title}</td>
                       <td> ${rating} </td>
-                      <td> ${year}</td>
                       <td> ${genre}</td>
-                      <td><button class="editMovieButton">Edit Movie</button></td>
+                      <td> ${year}</td>
                       </tr>`);
   });
 
@@ -59,9 +58,9 @@ $('#newMovieButton').click(function(event) {
                       <td scope="row"> ${id} </td>
                       <td>${title}</td>
                       <td> ${rating} </td>
-                      <td> ${year}</td>
                       <td> ${genre}</td>
-                      <td><button class="editMovieButton">Edit Movie</button></td>
+                      <td> ${year}</td>
+                      <td></td>
                       </tr>`);
         });
 
@@ -75,15 +74,22 @@ $('#newMovieButton').click(function(event) {
 
 
 //edit json
-$('.jsonEditDiv').hide();
-let clickOnce = 0;
+
 $('.editMovieButton').click(function(){
-    clickOnce += 1;
-    if(clickOnce % 2 !== 0){
-        $('.jsonEditDiv').show();
-    } else {
-        $('.jsonEditDiv').hide();
-    }
+    const movieID = $('#editMovieID').val();
+    const newName = $('#editMovieName').val();
+    const newRating = $('#editRatingInput').val();
+
+    if(movieID == movies.id)
+        $.ajax("/api/movies", {
+            type: "PUT",
+            data: {
+                title: newName,
+                rating: newRating
+            }
+        });
+
+
 });
 
 

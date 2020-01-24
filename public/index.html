@@ -24,9 +24,10 @@
                 <th scope="col">ID</th>
                 <th scope="col">Title</th>
                 <th scope="col">Rating</th>
-                <th scope="col">Year</th>
                 <th scope="col">Genre</th>
-                <th scope="col">Edit</th>
+                <th scope="col">Year</th>
+
+<!--                <th scope="col">Edit</th>-->
             </tr>
             </thead>
             <tbody id="insertProducts">
@@ -59,16 +60,39 @@
         <br>
         <button id="newMovieButton">Action</button>
 
+
+        <h2>Edit Movie</h2>
+
+        <label for="editMovieID">Which movie would you like to edit?</label>
+        <br>
+        <input type="text" id="editMovieID" placeholder="Enter Movie ID">
+        <br>
+        <input type="text" id="editMovieName" placeholder="Enter Movie Name">
+        <br>
+        <label for="editRatingInput">How would you rate this movie?</label>
+        <br>
+        <select id="editRatingInput">
+            <option value="1">*</option>
+            <option value="2">**</option>
+            <option value="3">***</option>
+            <option value="4">****</option>
+            <option value="5" selected="selected">*****</option>
+        </select>
+        <br>
+        <button class="editMovieButton">Submit Changes</button>
+
+
+
     </div>
 
 <!--EDIT JSON -->
 
-        <div class="message_container z-1 customMessage jsonEditDiv">
-            <div class="message" augmented-ui="exe tl-clip br-clip">
-                <div class="title" augmented-ui="exe tl-clip br-clip">Would you like to edit this movie?</div>
-                <p>edit options</p>
-            </div>
-        </div>
+<!--        <div class="message_container z-1 customMessage jsonEditDiv">-->
+<!--            <div class="message" augmented-ui="exe tl-clip br-clip">-->
+<!--                <div class="title" augmented-ui="exe tl-clip br-clip">Would you like to edit this movie?</div>-->
+<!--                <p>edit options</p>-->
+<!--            </div>-->
+<!--        </div>-->
 
 <!--    BOOTSTRAP-->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
