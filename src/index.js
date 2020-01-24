@@ -48,6 +48,8 @@ getMovies().then((movies) => {
 $('#newMovieButton').click(function(event) {
     event.preventDefault();
   const movieName = $('#movieNameInput').val();
+  const movieGenre = $('#addMovieGenre').val();
+  const movieYear = $('#addMovieYear').val()
   const movieRating = $('#selectRatingInput').val();
   // var formData = JSON.stringify(movieName + movieRating).serializeArray();
     $('#insertProducts').empty();
@@ -57,7 +59,9 @@ $('#newMovieButton').click(function(event) {
     type: "POST",
     data: {
       title: movieName,
-      rating: movieRating
+      rating: movieRating,
+      genre: movieGenre,
+      year: movieYear
     }
   });
 

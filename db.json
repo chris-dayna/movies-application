@@ -13,6 +13,13 @@
       "year": "1977",
       "genre": "Sci-fi / Action / Fantasy",
       "id": 2
+    },
+    {
+      "title": "Caddyshack",
+      "rating": "5",
+      "genre": "Comedy",
+      "year": "1980",
+      "id": 3
     }
   ]
 }

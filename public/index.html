@@ -17,7 +17,7 @@
 
 
 
-        <div class="row"></div>
+        <div class="row d-flex justify-content-center">
         <div id="loadingDiv" style="display: block"></div>
 <!--        <img src="img/filmreel.png" id="loading">-->
         <h1 class="text-center mt-3">Movie Application</h1>
@@ -47,11 +47,18 @@
 
             </tbody>
         </table>
-
+        </div>
 
 <!-- ADD A MOVIE-->
+
+        <h2>Add A Movie!</h2>
         <label for="movieNameInput">What movie would you like to add?</label>
-        <input type="text" id="movieNameInput" placeholder="enter movie name">
+        <br>
+        <input type="text" id="movieNameInput" placeholder="Enter movie name">
+        <br>
+        <input type="text" id="addMovieGenre" placeholder="Enter Genre">
+        <br>
+        <input type="text" id="addMovieYear" placeholder="Enter Year">
         <br>
         <label for="selectRatingInput">How would you rate this movie?</label>
         <select id="selectRatingInput">
