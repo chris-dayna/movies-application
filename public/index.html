@@ -16,7 +16,7 @@
     <div class="container">
         <div class="row"></div>
 <!--        <img src="img/filmreel.png" id="loading">-->
-        <h1 class="text-center">Movie Application</h1>
+        <h1 class="text-center mt-3">Movie Application</h1>
 
         <table id="products" class="table table-striped table-bordered mt-4">
             <thead class="thead-dark">
@@ -26,6 +26,7 @@
                 <th scope="col">Rating</th>
                 <th scope="col">Year</th>
                 <th scope="col">Genre</th>
+                <th scope="col">Edit</th>
             </tr>
             </thead>
             <tbody id="insertProducts">
@@ -59,6 +60,15 @@
         <button id="newMovieButton">Action</button>
 
     </div>
+
+<!--EDIT JSON -->
+
+        <div class="message_container z-1 customMessage jsonEditDiv">
+            <div class="message" augmented-ui="exe tl-clip br-clip">
+                <div class="title" augmented-ui="exe tl-clip br-clip">Would you like to edit this movie?</div>
+                <p>edit options</p>
+            </div>
+        </div>
 
 <!--    BOOTSTRAP-->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>

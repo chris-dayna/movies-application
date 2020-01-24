@@ -24,6 +24,7 @@ getMovies().then((movies) => {
                       <td> ${rating} </td>
                       <td> ${year}</td>
                       <td> ${genre}</td>
+                      <td><button class="editMovieButton">Edit Movie</button></td>
                       </tr>`);
   });
 
@@ -60,6 +61,7 @@ $('#newMovieButton').click(function(event) {
                       <td> ${rating} </td>
                       <td> ${year}</td>
                       <td> ${genre}</td>
+                      <td><button class="editMovieButton">Edit Movie</button></td>
                       </tr>`);
         });
 
@@ -71,26 +73,18 @@ $('#newMovieButton').click(function(event) {
 
 });
 
-// $('#btnRefresh').click(function(event) {
-//     event.preventDefault();
-//     $("#insertProducts").empty();
-//     $.ajax("data/inventory.json")
-//         .done(function(data){
-//             console.log(data);
-//             for (var i = 0; i < data.length; i++){
-//                 $('#insertProducts').append('<tr>' +
-//                     '<td>' + data[i].title + '</td>' +
-//                     '<td>' + data[i].quantity + '</td>' +
-//                     '<td>' + data[i].price + '</td>' +
-//                     '<td>' + data[i].categories + '</td>' +
-//                     '</tr>');
-//             }
-//         });
-// });
 
-
-
-
+//edit json
+$('.jsonEditDiv').hide();
+let clickOnce = 0;
+$('.editMovieButton').click(function(){
+    clickOnce += 1;
+    if(clickOnce % 2 !== 0){
+        $('.jsonEditDiv').show();
+    } else {
+        $('.jsonEditDiv').hide();
+    }
+});
 
 
 

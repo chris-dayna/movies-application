@@ -3,12 +3,46 @@ html, body {
 }
 
 .container {
-    position: relative;
-    top: 50%;
-    transform: translateY(-100%);
+    /*position: relative;*/
+    /*top: 50%;*/
+    /*transform: translateY(-100%);*/
     text-align: center;
 }
 
 .hidden {
     display: none;
+}
+
+.message_container {
+    filter: drop-shadow(0 0 8px var(--main-red-color));
+}
+.message_container .message {
+    background: #000;
+    --aug-border: 2px;
+    --aug-border-bg: var(--main-red-color);
+    width: calc(100% - 20px);
+    max-width: 640px;
+    margin: 0 auto;
+    /*overflow: hidden;*/
+    transition: all .5s;
+}
+.message_container .message .title {
+    display: inline-block;
+    padding: .5em 2em;
+    font-weight: bold;
+    letter-spacing: .1em;
+    text-align: center;
+    text-transform: uppercase;
+    --aug-inset: .25em;
+    --aug-inset-bg: #ff0;
+    --aug-br: .75em;
+}
+.message_container .message p {
+    color: #fff;
+    padding: 1em;
+    margin: 0;
+    display: block;
+    line-height: 1.4em;
+    text-align: justify;
+    max-height: 10em;
 }
