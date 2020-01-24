@@ -9,10 +9,6 @@ html, body {
     text-align: center;
 }
 
-.hidden {
-    display: none;
-}
-
 .message_container {
     filter: drop-shadow(0 0 8px var(--main-red-color));
 }
@@ -45,4 +41,13 @@ html, body {
     line-height: 1.4em;
     text-align: justify;
     max-height: 10em;
+}
+#loadingDiv {
+    background: url('img/filmreel.png') no-repeat center center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 9999999;
 }

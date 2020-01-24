@@ -9,6 +9,17 @@ sayHello('World');
 /**
  * require style imports
  */
+function hideLoader() {
+    $('#loadingDiv').hide();
+}
+
+$(window).ready(hideLoader);
+
+// Strongly recommended: Hide loader after 20 seconds, even if the page hasn't finished loading
+setTimeout(hideLoader, 20 * 1000);
+
+
+
 
 
 
@@ -60,7 +71,6 @@ $('#newMovieButton').click(function(event) {
                       <td> ${rating} </td>
                       <td> ${genre}</td>
                       <td> ${year}</td>
-                      <td></td>
                       </tr>`);
         });
 
@@ -105,7 +115,6 @@ $('.editMovieButton').click(function(){
                       <td> ${rating} </td>
                       <td> ${genre}</td>
                       <td> ${year}</td>
-                      <td></td>
                       </tr>`);
         });
 
@@ -141,7 +150,6 @@ $('.deleteMovieButton').click(function(){
                       <td> ${rating} </td>
                       <td> ${genre}</td>
                       <td> ${year}</td>
-                      <td></td>
                       </tr>`);
         });
 
@@ -150,7 +158,10 @@ $('.deleteMovieButton').click(function(){
         alert('Oh no! Something went wrong.\nCheck the console for details.');
         console.log(error);
     });
+
+
 });
+
 
 
 
