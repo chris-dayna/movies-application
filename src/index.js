@@ -37,7 +37,7 @@ getMovies().then((movies) => {
 $('#newMovieButton').click(function(event) {
     event.preventDefault();
   const movieName = $('#movieNameInput').val();
-  const movieRating =$('#selectRatingInput').val();
+  const movieRating = $('#selectRatingInput').val();
   // var formData = JSON.stringify(movieName + movieRating).serializeArray();
     $('#insertProducts').empty();
 
@@ -75,19 +75,23 @@ $('#newMovieButton').click(function(event) {
 
 //edit json
 
-$('.editMovieButton').click(function(){
+$('.editMovieButton').click(function(event){
     const movieID = $('#editMovieID').val();
     const newName = $('#editMovieName').val();
     const newRating = $('#editRatingInput').val();
 
-    if(movieID == movies.id)
-        $.ajax("/api/movies", {
-            type: "PUT",
-            data: {
-                title: newName,
-                rating: newRating
-            }
-        });
+    $('movies').each(function(){
+        if(movieID === movies[i].id) {
+            $.ajax("/api/movies", {
+                type: "PUT",
+                data: {
+                    title: newName,
+                    rating: newRating
+                }
+            });
+        }
+    })
+
 
 
 });
