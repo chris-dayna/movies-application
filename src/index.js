@@ -75,25 +75,37 @@ $('#newMovieButton').click(function(event) {
 
 //edit json
 
-$('.editMovieButton').click(function(event){
-    const movieID = $('#editMovieID').val();
-    const newName = $('#editMovieName').val();
-    const newRating = $('#editRatingInput').val();
+$('.editMovieButton').click(function(){
+    const movieID = $('#editMovieID');
+    const newName = $('#editMovieName');
+    const newGenre = $('#editMovieGenre');
+    const newYear = $('#editMovieYear')
+    const newRating = $('#editRatingInput');
+    const moviePost = {id: movieID.val(), title: newName.val(), rating: newRating.val(), genre: newGenre.val(), year: newYear.val()};
+    console.log(moviePost);
+    const url = '/api/movies/' + movieID.val();
+    const options = {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(moviePost),
+    };
+        fetch(url, options).then(response => response.json());
+        });
 
-    $('movies').each(function(){
-        if(movieID === movies[i].id) {
-            $.ajax("/api/movies", {
-                type: "PUT",
-                data: {
-                    title: newName,
-                    rating: newRating
-                }
-            });
-        }
-    })
 
-
-
+// delete
+$('.deleteMovieButton').click(function(){
+    const deleteMovieID = $('#deleteMovieID');
+    const url = '/api/movies/' + deleteMovieID.val();
+    const options = {
+        method: 'DELETE',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+    };
+    fetch(url, options).then(response => response.json());;
 });
 
 

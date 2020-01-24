@@ -1,11 +1,11 @@
 {
   "movies": [
     {
+      "id": 1,
       "title": "Casablanca",
-      "rating": "4",
-      "year": "1942",
+      "rating": "5",
       "genre": "Drama / Romance",
-      "id": 1
+      "year": "1942"
     },
     {
       "title": "Star Wars: A New Hope",
@@ -13,27 +13,6 @@
       "year": "1977",
       "genre": "Sci-fi / Action / Fantasy",
       "id": 2
-    },
-    {
-      "title": "Caddy Shack",
-      "rating": "4",
-      "year": "1980",
-      "genre": "Comedy",
-      "id": 3
-    },
-    {
-      "title": "Terminator",
-      "rating": "5",
-      "year": "1984",
-      "genre": "Sci-fi / Action / Fantasy",
-      "id": 4
-    },
-    {
-      "title": "The Greatest Showman",
-      "rating": "5",
-      "year": "2017",
-      "genre": "Drama / Musical",
-      "id": 5
     }
   ]
 }
